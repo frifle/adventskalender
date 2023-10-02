@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: Licht-Detektor</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
+
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
+        <div class="content-container active">
+            <h2>6. Dezember: Licht-Detektor</h2>
+            <p>
+                Der PIN 14 "SIGNAL_IN" verhält sich so "komisch", weil er einen sehr empfindlichen Verstärker
+                eingebaut hat. Er spricht schon auf sehr kleine Ströme an. Baue heute die gelbe LED an den PIN 14 - und
+                zwar verkehrt herum. Dann arbeitet auch die LED verkehrt herum: Normalerweise wird aus Strom Licht - und
+                nun wird aus Licht Strom. Allerdings ein seehr kleiner.
+            </p>
+            <p>
+                Wie genau Du die LED einbaust, das muss wieder gepuzzelt werden: Auf welches Niveau hat sich Dein PIN 14
+                beim Einschalten eingependelt?
+            <ul>
+                <li>Ist die grüne LED anfangs aus, dann baue
+                    die LED in Variante A ein. Dort sitzt das kürzere Bein der LED in der (+) Schiene.</li>
+                <li>Ist die LED an, dann nimm Variante B. Hier baust Du das längere Bein in die (-) Schiene</li>
+            </ul>
+            </p>
+            <p>
+                Beleuchte die gelbe LED mit einer hellen Lampe, z.B. mit der Taschenlampe aus dem Smartphone. Das sollte
+                ausreichen, um die grüne LED umzuschaalten. Der Strom ist sehr klein, vielleicht sogar kleiner als
+                ein Mikro-Ampere. Für den Verstärker im IC reicht aber schon dieser kleine Strom aus, um den SIGNAL_IN
+                ein (+) sehen zu lassen.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/06_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Falls Deine gelbe LED doch nicht ausreichend Photostrom produziert: Hast Du eine Bastelkiste mit
+                mehreren Exemplaren? Such die beste heraus.
+            </p>
+            <p>
+                Und falls das noch immer nicht reicht - einen letzten Supertrick gäbe es noch: Der Innenwiderstand an PIN
+                14 wird mit schlapperer Batterie größer, und damit steigt die Empfindlichkeit der Schaltung. Tausche
+                also die Batterie. Oder mache sie künstlich schlapper. Baue dazu einen 1 kOhm Widerstand
+                (braun-schwarz-rot) oder sogar einen 10 kOhm (braun-schwarz-orange) anstelle vom Schaltdraht zur Batterie
+                zwischen den Steckbrett-Punkt A1 und der (+) Schiene ein.
+            </p>
+            <details>
+                <summary>Übrigens</summary>
+                <p>
+                    Die LED funktioniert in diesem Aufbau als Solarzelle: Bei Beleuchtung erzeugt sie
+                    einen Strom. Allerdings ist eine LED auf die Erzeugung von hellem Licht optimiert, nicht auf einen
+                    großen Photostrom. Also ist letzterer sehr sehr klein. Aber im Prinzip ist dies genau das, was Du
+                    heute auf so vielen Hausdächern als Photovoltaik-Anlage installiert siehst. Nur dass die wiederum
+                    auf eine hohe Stromerzeugung optimiert sind.
+                </p>
+                <p>
+                    Ach, und warum braucht die gelbe LED heute mal keinen Widerstand? Doch, sie hat einen, nämlich den
+                    Innenwiderstand vom IC, den man allerdings nicht direkt sehen kann. Das ist heute eine absolute
+                    Ausnahme, sonst bitte immer die LED mit einem deutlich sichtbaren Widerstand verwenden.
+                </p>
+            </details>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: Zeitschaltuhr</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
+
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
+        <div class="content-container active">
+            <h2>4. Dezember: Zeitschaltuhr</h2>
+            <p>
+                Der Slogan "Jeden Tag ein Puzzle aus elektronischen Bauteilen" ist durchaus ernst gemeint. Da wir beim
+                Schreiben dieser Zeilen nicht ganz genau wissen können, was für Teile Du Dir besorgt hast, können sich
+                die Schaltungen durchaus ein wenig unterscheiden. Also darfst Du ab und zu ein wenig probieren
+                (puzzeln), bis es wirklich so wie beschrieben funktioniert.
+            </p>
+            <p>
+                Die beiden Eingänge vom XOR-Gatter haben sich gestern irgendwie unterschiedlich verhalten, insbesondere
+                wenn sie nicht mit der (+)- oder (-)-Schiene verbunden waren.
+            </p>
+            <p>
+                Der Eingang an PIN 3 war sehr flatterig. Bei ihm war nicht vorhersagbar, welchen Zustand die grüne LED
+                hat. Die LED war schon beeinflussbar, indem Du nur deine Hand dem freien Draht annähertest.
+            </p>
+            <p>
+                Der Eingang an PIN 14 war dagegen "brav". Wenn er frei lag, hat er sich selbst zurückgesetzt. In welchen
+                Status, das hängt tatsächlich von Deinem konkreten Exemplar des ICs ab. Bei mir verhält er sich, als
+                wäre er mit (-) verbunden. [1]
+            </p>
+            <p>
+                Nimm Dir den 10 µF Elektrolytkondensator (ELKO) und setze ihn an PIN 14. Beim ELKO muss man die
+                Polarität beachten. Ein Anschluss trägt eine (-)-Markierung. Dieser Anschluss kommt direkt an PIN 14.
+                Der andere Anschluss wird mit der (+)-Schiene vom Steckbrett verbunden.
+            </p>
+            <p>
+                Der PIN 3 vom IC wird gezähmt, indem Du ihn über eine Drahtbrücke direkt mit (-) verbindest.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/04_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Nimm nun einen der langen Stücke vom Schaltdraht und setze einen Anschluss an PIN 14. Nach Anschluss der
+                Batterie warte so ca 30s, bis sich der PIN14 entschieden hat, welchen Zustand er haben möchte. Dann
+                berühre mit dem zweiten Anschluss kurz
+            <ul>
+                <li>wenn die LED gerade leuchtet die (-) Schiene,</li>
+                <li>wenn die LED gerade aus ist die (+) Schiene.</li>
+            </ul>
+            Die LED ändert ihren Zustand und schaltet erst nach etlichen Sekunden wieder um. Dies ist also eine einfache
+            Zeitschaltuhr.
+            </p>
+            <p>
+                Merk Dir bitte diese Umschaltzeit. So lange musst Du in den nächsten Tagen manchmal warten, bis die
+                Schaltungen ihre größte Empfindlichkeit erreicht haben.
+            </p>
+            <details>
+                <summary>Übrigens:</summary>
+                <p>
+                    [1]: Zu dieser Eigenschaft finde ich keine eindeutige Beschreibung im Datenblatt. Hinter PIN 3 liegt
+                    ein "self biased" Verstärker, dessen Input-Pegel bei V_DD/2 liegt. Aber was bedeutet dies für den
+                    output-Level? Im Prinzip ja eigentlich nix, und tatsächlich habe ich mehrere Exemplare auf dem
+                    Tisch, die sich hier unterschiedlich verhalten.
+                </p>
+                <p>
+                    Über die obige Zeitmessung kannst man abschätzen, wie groß der Innenwiderstand hinter PIN 14 ist. Ich
+                    messe eine t_1/2 von ca 13s. Mit R \approx 3/2 * 13s / 10nF \approx 2 MOhm komme ich auf einen
+                    Innenwiderstand im gesunden Mega-Ohm-Bereich. Das ist recht viel verglichen mit den Werten aus dem
+                    Datenblatt.
+                </p>
+                <p>
+                    Der Innenwiderstand vom 4046 ist dazu noch abhängig von der Versorgungsspannung. Bei einer frischen
+                    Batterie misst Du einen deutlich kleineren Widerstand als bei einer schon etwas schlappen Batterie.
+                </p>
+            </details>
+        </div>
+    </body>
+
+</html>

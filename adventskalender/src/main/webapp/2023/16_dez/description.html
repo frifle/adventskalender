@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: Thermometer</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
+
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
+        <div class="content-container active">
+            <h2>16. Dezember: Thermometer</h2>
+            <p>
+                Ein Transistor wird meistens als Verstärker verwendet. Im heutigen Aufbau stellt er aber ein Thermometer
+                dar. Er ändert nämlich seine Verstärker-Eigenschaften mit der Temperatur, und das kann man hier hören
+                und vielleicht auch sehen. Jedes Digital-Thermometer nutzt diesen Effekt aus.
+            </p>
+            <p>
+                Am mittleren Anschluss vom Transistor, der Basis, fließt über den 10 MOhm Widerstand ein sehr kleiner
+                Strom. Der BC 547 C hat eine Stromverstärkung von um die 500-fach, und die ändert sich recht merklich
+                mit der Temperatur. Wenn Du nun den Transistor mit dem Finger leicht erwärmst, wirst Du eine Tonänderung
+                hören. Wenn er wieder abgekühlt wird, z.B. kurz im Kühlschrank, geht diese Änderung wieder zurück.
+            </p>
+            <p>
+                Durch die Änderung der Stromverstärkung ändert sich auch der Strom durch den 10 kOhm Widerstand und
+                somit die Spannung am linken Bein vom Transistor, dem Collector. Genau diese Spannung wird hier als
+                Steuerspannung für den VCO genommen.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/16_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Wenn Du Glück hast, kannst Du auch eine Helligkeitsänderung an der LED sehen. Dazu ist es am besten,
+                wenn die LED nur ganz schwach leuchtet. Probiere mal die Farben durch, ob du eine findest, die hier
+                passt. Glück brauchst Du dafür, da jeder einzelne Transistor eine leicht andere Strom-Verstärkung hat.
+                Sie ist nicht genau vorhersehbar. Vielleicht passt es mit Deinem Transitor gerade für die grüne LED, bei
+                anderen passt die Blaue. Und manchmal geht leider keine der LED-Farben.
+            </p>
+            <p>
+                Solche Änderungen am Verhalten einer Schaltung mit der Temperatur möchte man im echten Leben gerne
+                vermeiden. Der IC 4046 ist speziell Temperatur-stabilisiert. Wenn Du den erwärmst, dann wirst Du keine
+                Tonänderung hören.
+            </p>
+            <p>
+                Noch ein Teil kann eine ausgeprägte Temperaturabhängigkeit haben: Erwärme mal den Kondensator.
+                Insbesondere die Varianten, die noch nach Keramik aussehen, ändern beim Berühren mit dem Finger den Ton
+                erheblich. Aber nicht alle Typen von Kondensatoren sind so empfindlich.
+            </p>
+            <p>
+            <details>
+                <summary>Übrigens:</summary>
+                <p>
+                    Ist jemals ein Adventskalender aus Schoki oder Kräutertee mit dem Nobelpreis ausgezeichnet worden?
+                    Nee, oder? Hier ist das anders:
+                </p>
+                <p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>1956</td>
+                            <td>Der Transistor</td>
+                        </tr>
+                        <tr>
+                            <td>2000</td>
+                            <td>Integrierte Schaltkreise ICs</td>
+                        </tr>
+                        <tr>
+                            <td>2014</td>
+                            <td>Die blaue LED</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </p>
+                <p>
+                    Drei Nobelpreise auf einem Steckbrett! Und das sind nur die direkten Preise in Physik. Chapeau
+                    Adventskalender!
+                </p>
+                <p>
+                    Obwohl: manche Schoki hätte schon einen Nobelpreis verdient! Bei Kräutertee bin ich mir nicht so
+                    sicher...
+                </p>
+            </details>
+            </p>
+        </div>
+    </body>
+
+</html>

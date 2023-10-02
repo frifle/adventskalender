@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	</meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	</meta>
+	<meta name="description"
+		content="Ein Adventskalender ohne Schoki oder Kräutertee für Bastler, Maker, Neugierige mit Puzzles aus Elektronik-Bauteilen wie Steckbrett, PLL IC 4046, Widerständen, Tranistoren, Kondensatoren sowie vielen kreativen Ideen">
+	</meta>
+	<title>Elektronik Adventskalender</title>
+	<base target="_blank">
+	</base>
+	<link rel="icon" href="img/star.png" sizes="any">
+	</link>
+	<link rel="stylesheet" href="css/stylesheet.css">
+	</link>
+</head>
+
+<body class="christmas-background">
+	<my-snowflakes aria-hidden="true"></my-snowflakes>
+	<div id="container">
+		<main>
+			<header>
+				<span>Elektronik Adventskalender</span>
+			</header>
+			<section class="intro-buttons btn-leiste">
+				<button id="intro_button" class="btn btn-border" data-content="intro" aria-label="öffnet die Einleitung"
+					aria-controls="#content">Willkommen</button>
+				<button id="parts_button" class="btn btn-border" data-content="parts" aria-label="öffnet die Stückliste"
+					aria-controls="#content">Stückliste</button>
+			</section>
+			<section class="stars" tabindex="-1">
+				<button class="btn btn-star flexible-width" disabled="" data-day="1"
+					aria-label="öffnet den ersten Dezember" aria-controls="#content" data-content="dez01"> 1</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="2"
+					aria-label="öffnet den zweiten Dezember" aria-controls="#content" data-content="dez02"> 2</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="3"
+					aria-label="öffnet den dritten Dezember" aria-controls="#content" data-content="dez03"> 3</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="4"
+					aria-label="öffnet den vierten Dezember" aria-controls="#content" data-content="dez04"> 4</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="5"
+					aria-label="öffnet den fünften Dezember" aria-controls="#content" data-content="dez05"> 5</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="6"
+					aria-label="öffnet den sechsten Dezember" aria-controls="#content" data-content="dez06"> 6</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="7"
+					aria-label="öffnet den siebten Dezember" aria-controls="#content" data-content="dez07"> 7</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="8"
+					aria-label="öffnet den achten Dezember" aria-controls="#content" data-content="dez08"> 8</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="9"
+					aria-label="öffnet den neunten Dezember" aria-controls="#content" data-content="dez09"> 9</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="10"
+					aria-label="öffnet den zehnten Dezember" aria-controls="#content" data-content="dez10">10</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="11"
+					aria-label="öffnet den elften Dezember" aria-controls="#content" data-content="dez11">11</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="12"
+					aria-label="öffnet den zwölften Dezember" aria-controls="#content" data-content="dez12">12</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="13"
+					aria-label="öffnet den dreizehnten Dezember" aria-controls="#content"
+					data-content="dez13">13</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="14"
+					aria-label="öffnet den vierzehnten Dezember" aria-controls="#content"
+					data-content="dez14">14</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="15"
+					aria-label="öffnet den fünfzehnten Dezember" aria-controls="#content"
+					data-content="dez15">15</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="16"
+					aria-label="öffnet den sechzehnten Dezember" aria-controls="#content"
+					data-content="dez16">16</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="17"
+					aria-label="öffnet den siebzehnten Dezember" aria-controls="#content"
+					data-content="dez17">17</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="18"
+					aria-label="öffnet den achzehnten Dezember" aria-controls="#content"
+					data-content="dez18">18</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="19"
+					aria-label="öffnet den neunzehnten Dezember" aria-controls="#content"
+					data-content="dez19">19</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="20"
+					aria-label="öffnet den zwanzigsten Dezember" aria-controls="#content"
+					data-content="dez20">20</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="21"
+					aria-label="öffnet den einundzwanzigsten Dezember" aria-controls="#content"
+					data-content="dez21">21</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="22"
+					aria-label="öffnet den zweiundzwanzigsten Dezember" aria-controls="#content"
+					data-content="dez22">22</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="23"
+					aria-label="öffnet den dreiundzwanzigsten Dezember" aria-controls="#content"
+					data-content="dez23">23</button>
+				<button class="btn btn-star flexible-width" disabled="" data-day="24"
+					aria-label="öffnet den Heiligabend" aria-controls="#content" data-content="dez24">24</button>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+				<div class="flexible-width flexible-width-filler" aria-hidden="true"></div>
+			</section>
+			<div class="content-container" tabindex="-1">
+				<div class="content-buttons btn-leiste" tabindex="-1">
+					<button id="close_button" class="btn btn-border" aria-label="aktuellen Text schliessen"
+						aria-controls="#content">Schliessen</button>
+					<button id="gluehwein_button" class="btn btn-border" aria-label="Spende einen Glühwein"
+						aria-controls="#content" data-content="spende">Glühwein</button>
+				</div>
+				<section id="content" class="content" aria-live="assertive" aria-atomic="true"></section>
+			</div>
+			<footer id="impres-footer" data-content="legal"
+				arial-label="Zum Impressum, Datenschutz und den Lizenzbedingungen" aria-controls="#content">
+				Impressum / Datenschutz / Lizenz
+			</footer>
+		</main>
+	</div>
+	<nav aria-hidden="true">
+		<menu>
+			<li><a id="intro" href="./2023/00_intro/intro.html"></a></li>
+			<li><a id="parts" href="./2023/00_parts/parts.html"></a></li>
+			<li><a id="spende" href="./2023/00_spende/spende.html"></a></li>
+			<li><a id="dez01" href="./2023/01_dez/description.html"></a></li>
+			<li><a id="dez02" href="./2023/02_dez/description.html"></a></li>
+			<li><a id="dez03" href="./2023/03_dez/description.html"></a></li>
+			<li><a id="dez04" href="./2023/04_dez/description.html"></a></li>
+			<li><a id="dez05" href="./2023/05_dez/description.html"></a></li>
+			<li><a id="dez06" href="./2023/06_dez/description.html"></a></li>
+			<li><a id="dez07" href="./2023/07_dez/description.html"></a></li>
+			<li><a id="dez08" href="./2023/08_dez/description.html"></a></li>
+			<li><a id="dez09" href="./2023/09_dez/description.html"></a></li>
+			<li><a id="dez10" href="./2023/10_dez/description.html"></a></li>
+			<li><a id="dez11" href="./2023/11_dez/description.html"></a></li>
+			<li><a id="dez12" href="./2023/12_dez/description.html"></a></li>
+			<li><a id="dez13" href="./2023/13_dez/description.html"></a></li>
+			<li><a id="dez14" href="./2023/14_dez/description.html"></a></li>
+			<li><a id="dez15" href="./2023/15_dez/description.html"></a></li>
+			<li><a id="dez16" href="./2023/16_dez/description.html"></a></li>
+			<li><a id="dez17" href="./2023/17_dez/description.html"></a></li>
+			<li><a id="dez18" href="./2023/18_dez/description.html"></a></li>
+			<li><a id="dez19" href="./2023/19_dez/description.html"></a></li>
+			<li><a id="dez20" href="./2023/20_dez/description.html"></a></li>
+			<li><a id="dez21" href="./2023/21_dez/description.html"></a></li>
+			<li><a id="dez22" href="./2023/22_dez/description.html"></a></li>
+			<li><a id="dez23" href="./2023/23_dez/description.html"></a></li>
+			<li><a id="dez24" href="./2023/24_dez/description.html"></a></li>
+			<li><a id="legal" href="./2023/99_legal/legal.html"></a></li>
+		</menu>
+	</nav>
+	<script src="js/adventskalender.js" type="module"></script>
+	<script src="js/snowflakes.js" type="module"></script>
+</body>
+
+</html>

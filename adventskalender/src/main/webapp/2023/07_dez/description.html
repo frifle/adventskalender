@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: das PLL Spiel</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
+
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
+        <div class="content-container active">
+            <h2>7. Dezember: Das PLL-Spiel</h2>
+            <p>
+                Schneide Dir aus Schaltdraht zwei Steckbrücken, eine 15 mm und eine 40 mm lang, und befreie sie diesmal
+                vollständig von der Isolierung. Biege die kürzere an beiden Enden für 5 mm um und stecke sie, wie im
+                Bild gezeigt, mit beiden Enden in die (+)-Schiene.
+            </p>
+            <p>
+                Die längere biegst Du auch an beiden Enden für 5 mm
+                um, knickst sie dann aber in der Mitte zu einem U um und steckst sie als Verbindung der 3. und 5.
+                Reihe in Zeile A. Das U liegt dabei knapp über der (+) Schiene, berührt den Draht dort aber nicht. Du
+                hast nun einen Taster gebaut.
+            </p>
+            <p>
+                Die Reihe 3 wird über einen 100 kOhm Widerstand (braun-schwarz-gelb als pull-down-Widerstand) mit (-)
+                verbunden. Der PIN 3 "COMPARATOR IN" bekommt über die Blink-LED ein wechselndes Eingangs-Signal. Als
+                Resultat blinkt die grüne LED im Gegentakt mit der roten.
+            </p>
+            <p>
+                Tippe nun mit Deinem Finger auf das Drahtbrücken-U und schliesse damit den Taster. Damit änderst Du
+                das gleichmäßige Blinken der grünen LED: sie blinkt im Gleichtakt mit der roten.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/07_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Versuche mal, den Taster rhythmisch zu betätigen. Triffst Du die Frequenz der roten LED so, dass die
+                grüne LED komplett an geht? Wenn Du dies schaffst, bist Du Sieger im PLL-Spiel. Achtung, Challenge:
+                Tipp mal so, dass die grüne LED komplett _aus_ ist.
+            </p>
+            <p>
+                In diesem Spiel machst Du als Mensch alles, was ein PLL so macht:
+            <ol>
+                <li>
+                    Du erzeugst selbst ein Blinken.
+                </li>
+                <li>
+                    Du stellst Dein Finger-Blinken so ein, dass es zur Blink-Frequenz der roten LED passt.
+                </li>
+                <li>
+                    Du schaust auf die grüne LED und versuchst, dein Blinken so abzustimmen, dass Du im Gleich- oder
+                    Gegentakt blinkst.
+                </li>
+            </ol>
+            </p>
+            <details>
+                <summary>Übrigens</summary>
+                <p>
+                    Hier sind zwei unterschiedliche Widerstände verbaut. Deren Werte werden anhand eines Farb-Codes
+                    unterschieden. Hier im Adventskalender finden sich fünf verschiedene Werte mit folgenden Codes:
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>1 kOhm</td>
+                            <td>braun-schwarz-rot</td>
+                        </tr>
+                        <tr>
+                            <td>10 kOhm</td>
+                            <td>braun-schwarz-orange</td>
+                        </tr>
+                        <tr>
+                            <td>100 kOhm</td>
+                            <td>braun-schwarz-gelb</td>
+                        </tr>
+                        <tr>
+                            <td>1 MOhm</td>
+                            <td>braun-schwarz-grün</td>
+                        </tr>
+                        <tr>
+                            <td>10 MOhm</td>
+                            <td>braun-schwarz-blau</td>
+                        </tr>
+                    </tbody>
+                </table>
+                Du findest auf den Bauteilen immer noch einen vierten Farbring, meist einen goldenen. Er besagt die
+                Genauigkeit bzw die Toleranz des Wertes. Für weitere Infos siehe
+                <a href="https://de.wikipedia.org/wiki/Widerstand_(Bauelement)#Farbkodierung_auf_Widerst.C3.A4nden"
+                    aria-label="Weiterleitung zur Beschreibung der Farbcodes auf Wikipedia">Wikipedia</a>.
+                </p>
+            </details>
+
+        </div>
+    </body>
+
+</html>

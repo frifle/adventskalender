@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: Lichtschranke</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
+
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
+        <div class="content-container active">
+            <h2>17. Dezember: Lichtschranke</h2>
+            <p>
+                Heute werde beide bislang verwendeten Teile des 4046 zusammen gebracht: Den VCO und das
+                Vergleichs-Gatter. Die wichtige Verbindung der beiden ist die unscheinbare kleine Drahtbrücke zwischen
+                PIN 3 und PIN 4 vom IC. Der Ausgang des VCO wird hiermit an den "COMPARATOR_IN"-Eingang geschaltet.
+            </p>
+            <p>
+                Der VCO ist auf eine feste Frequenz gestellt, PIN 9 liegt an (+) und ändert sich nicht. Am Ausgang vom
+                VCO ist eine weiße, sehr helle LED gebaut, welche munter vor sich hin blinkt. Bitte nicht mit den Augen
+                dort direkt hinein sehen. Die LED ist wirklich hell! Sie wird auch "nur" von einem 1 kOhm Widerstand
+                (braun-schwarz-rot) begleitet.
+            </p>
+            <p>
+                Am PIN 14 "SIGNAL_IN" sitzt wieder die gelbe LED verkehrtherum eingebaut, also das kürzere Beinchen ist
+                im
+                (+). Und am Ausgang vom Vergleichs-Gatter an PIN 2 sitzt die grüne LED. Wenn sie leuchtet heißt das, daß
+                die beiden
+                Eingänge SIGNAL_IN und COMPARATOR_IN im selben Zustand sind. Ist sie aus, dann sind die zwei Eingänge
+                unterschiedlich. Das Vergleichs-Gatter hat übrigens den Namen PC1 für "phase-comparator 1".
+            </p>
+            <p>
+                Nun biege vorsichtig die weiße und die gelbe LED so aufeinander zu, dass die weiße direkt in die gelbe
+                LED
+                hinein leuchtet. Wenn Du das geschafft hast, dann geht die grüne LED aus. Jedenfalls fast, ein kleines
+                Rest-Flackern wird bleiben.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/17_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Da der Ausgang vom VCO, also auch die weiße LED, direkt mit COMPARATOR_IN verbunden ist - und die gelbe
+                LED
+                an SIGNAL_IN das Signal der weißen empfängt, sind beide Eingänge stets gleich. Damit geht die grüne LED
+                aus.
+            </p>
+            <p>
+                Halte nun einen Finger zwischen die weiße und gelbe LED. Die grüne LED wird deutlich heller. Tausche
+                mal den 1 MOhm Widerstand gegen einen 100 kOhm aus. Du siehst das Flackern nicht mehr mit Deinen
+                Augen, aber die Lichtschranke funktioniert noch immer. Oder tausche ihn gegen den 10 M Ohm, dann ist
+                durch das langsame Blinken gut sichtbar, wie die LEDs umschalten.
+            </p>
+            <p>
+                Solche "gepulsten" Lichtschranken werden gerne verwendet, da sie sehr unabhängig vom Umgebungslicht
+                arbeiten
+                können.
+            </p>
+        </div>
+    </body>
+
+</html>

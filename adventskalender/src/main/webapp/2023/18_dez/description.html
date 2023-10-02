@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+
+<head>
+	<meta charset="UTF-8">
+	</meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	</meta>
+	<title>Elektronik Adventskalender: PLL-Spiel Teil 2</title>
+	<base href="../../">
+	</base>
+	<link rel="stylesheet" href="css/stylesheet.css">
+	</link>
+</head>
+
+<body>
+	<header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
+	<div class="content-container active">
+		<h2>18. Dezember: PLL-Spiel Teil 2</h2>
+		<p>
+			Die beiden Teile VCO und PC1 bleiben verbunden, sie werden für eine neue Version des PLL-Spiels
+			beschaltet.
+		</p>
+		<p>
+			Die Steuerspannung vom VCO kommt vom Bleistift-Streifen, und der 10 MOhm Widerstand lässt ihn recht langsam
+			blinken. Der Ausgang vom VCO wird von der grünen LED angezeigt. Der Ausgang ist ferner mit COMPARE_IN vom
+			PC1 verbunden. Am SIGNAL_IN sitzt mal wieder die Blink-LED und am Ausgang vom PC1 die blaue. Sie
+			zeigt an, wie sehr sich die Eingangssignale vom PC1 unterscheiden.
+		</p>
+		<p>
+			Schaffst Du es, mit dem Bleistift-Streifen die Blink-Frequenz der grünen LED so auf die der roten
+			abzustimmen, dass die blaue LED aus geht?
+		</p>
+		<p>
+		<div class="image-container">
+			<img src="./2023/18_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+		</div>
+		</p>
+		<p>
+			Hier übernimmst Du nur noch eine Aufgabe des PLL: Du stellst das Blinken vom VCO ein, und zwar irgendwie
+			anhand der blauen LED. Aber dieses Regelung per Hand ist sau-sau schwer. Ich finde, dieses Spiel ist fast
+			unmöglich. Aber wenn Du das wirklich schafft, bist Du ein wahrer PLL-Champion.
+		</p>
+	</div>
+</body>
+
+</html>

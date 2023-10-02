@@ -1,0 +1,13 @@
+**/.metadata/
+**/.project
+**/.factorypath
+**/.classpath
+**/.settings/
+**/target/
+**/.sonarlint/
+**/.recommenders/
+**/.vscode/
+**/.directory
+/Servers/
+**/.apt_generated/
+**/.apt_generated_tests/

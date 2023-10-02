@@ -1,0 +1,264 @@
+:root {
+    --main-border-color: #433e1b;
+    --main-color: #222;
+    --main-background-color: white;
+    --header-background-color: #8a0;
+    --button-color: #ffe16b;
+    box-sizing: border-box;
+    font-size: clamp( 18px, 1.5vw, 24px ) ;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/permanent-marker-v16-latin-regular.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Permanent Marker', cursive;
+    color: var( --main-color );
+    hyphens: auto;
+    text-align: justify;
+}
+
+.christmas-background {
+    background-image: url( "../img/hintergrund.svg" );
+    background-size: cover;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th, td {
+	border: 1px solid grey;
+	padding: 0 0.5em;
+}
+
+th {
+	text-align: center;
+}
+
+nav {
+	display: none;
+}
+
+#container {
+	background-color: white;
+	max-width: 1280px;
+	margin: auto;
+}
+
+main {
+    display: grid;
+    grid-template: "header" "stars" "buttons" "footer";
+    grid-template-rows: min-content 1fr min-content min-content;
+    position:relative;
+    z-index: 1;
+}
+
+main::after {
+	content: "";
+	background: url( "../img/christmas-tree.svg" );
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.2;
+	z-index: -1;
+	position: absolute;
+	top: 5em;
+	left: 0;
+	height: calc(100% - 10em );
+	width: 100%;
+}
+
+header {
+	grid-area: header;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5em;
+    padding: 0.5em;
+
+    background-color: var( --header-background-color );
+
+    border-radius: 1em;
+    border: 0.2em solid var( --main-border-color );
+    box-shadow: 0 0 1em var( --main-border-color );
+}
+
+footer {
+	grid-area: footer;
+    font-size: 0.7rem;
+    text-align: right;
+    background-color: pink;
+    cursor: pointer;
+}
+
+summary {
+	cursor: pointer;
+}
+
+.intro-buttons {
+	grid-area: buttons;
+	padding: 0.5em;
+	z-index: 2;
+}
+
+.stars {
+	grid-area: stars;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow: auto;
+    scrollbar-width: thin;
+    z-index: 3
+}
+
+.content-container {
+    width: calc( 100% - 1em );
+    height: 0;
+    position: absolute;
+    top: -5em;
+    left: 0;
+    background-color: var( --main-background-color );
+    transition: all 0.5s ease;
+    overflow: auto;
+    margin: 0 0.5em;
+    padding: 0 0.5em;
+    border-radius: 1em;
+    border: 0.2em solid var( --main-border-color );
+    display: grid;
+    grid-template: "content" "buttons";
+    grid-template-rows: 1fr min-content;
+    z-index: 4;
+}
+
+.content-part {
+    text-align: center;
+}
+
+#content {
+	grid-area: content;
+}
+
+.content-buttons {
+	grid-area: buttons;
+	padding: 0.5em 0;
+}
+
+.content-container.active {
+    height: calc( 100% - 5em );
+    top: 5em;
+}
+
+.content-container .content {
+	overflow: auto;
+	padding: 0.5em 0;
+}
+
+.image-container {
+	text-align: center;
+}
+
+.image-container > img {
+	max-width: min( 100%, 40em );
+}
+
+.btn {
+    transition: all 0.5s ease-in-out;
+	transform-origin: 50% 50%;
+
+    border: none;
+    background-color: transparent;
+
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1rem;
+}
+
+.btn-border {
+    background-color: var( --button-color );
+
+    border-radius: 1em;
+    border: 0.2em solid var( --main-border-color );
+    box-shadow: 0 0 0.5em var( --main-border-color );
+    padding: 0.1em 0.5em;
+}
+
+.btn-star {
+    background-image: url("../img/star.svg");
+    background-repeat: no-repeat no-repeat;
+    background-size: contain;
+    background-origin: content-box;
+    aspect-ratio: 1 / 1;
+}
+
+.btn-leiste {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-leiste .btn {
+    width: 8em;
+    margin: 0 0.3em;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+}
+
+.btn:enabled:hover,.btn:enabled:focus {
+   opacity: 1;
+   outline: none;
+}
+
+.btn:enabled:hover, .btn.btn-star:enabled:focus {
+   transform: scale( 1.1 );
+}
+
+.btn.btn-border:enabled:focus {
+   box-shadow: 0 0 0.5em var( --header-background-color );
+}
+
+.flexible-width {
+    padding: 0.5em;
+    margin: 0;
+    min-width: min( 12em, 25vw, 25vh);
+    max-width: max( 15em, 33vw, 33vh );
+    flex: 1;
+}
+
+.flexible-width-filler {
+    height: 0;
+    padding: 0 0.5em;
+    aspect-ratio: unset;
+}
+
+@media (max-width:640px) {
+
+	.content-container.active {
+    	height: calc( 100% - 4em );
+    	top: 4em;
+	}
+
+    header {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        font-size: 0.4rem;
+    }
+
+}
