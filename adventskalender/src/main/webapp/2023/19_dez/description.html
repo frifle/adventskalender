@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de">
 
-<head>
-	<meta charset="UTF-8">
-	</meta>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	</meta>
-	<title>Elektronik Adventskalender: PLL</title>
-	<base href="../../"></base>
-	<link rel="stylesheet" href="css/stylesheet.css">
-	</link>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: PLL</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
 
-<body>
-	<header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
-	<div class="content-container active">
-		<h2>19. Dezember: PLL</h2>
-		<p>
-			@Todo
-		</p>
-		<p>
-
-		</p>
-		<p>
-		<div class="image-container">
-			<img src="./2023/19_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
-		</div>
-		</p>
-	</div>
-</body>
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
+        <div class="content-container active">
+            <h2>19. Dezember: PLL</h2>
+            <p>
+                Heute schliesst sich der Kreis, im wahrsten Sinne des Wortes. Der Ausgang vom VCO ist schon an den
+                Eingang COMPARATOR_IN gelegt - und heute verbindest Du auch noch den Ausgang vom Vergleichs-Gatter mit
+                dem Eingang vom VCO. Das ergibt eine Schleife, also englisch "loop".
+            </p>
+            <p>
+                Diese Verbindung erfolgt allerdings nicht direkt, sondern über einen Widerstand und einen Kondensator.
+                Diese beiden bilden zusammen einen Filter, der schnelle Frequenzen blockiert und langsame durchläßt,
+                einen low-pass Filter.
+            </p>
+            <p>
+                Ist dieser Filter geeignet auf die Frequenz des Oszillators abgestimmt, dann pendelt sich der VCO auf
+                diejenige Frequenz ein, die am SIGNAL_IN anliegt. Man sagt, der Oszillator "rastet ein", also englisch
+                "locked". Und zwar nicht nur mit der Frequenz vom Eingangs-Signal, sondern auch mit einer festen
+                Phasen-Beziehung. Und damit ist der PLL, also der Phase-locked-loop, komplett.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/19_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Vielleicht musst Du wieder ein wenig puzzeln, bis der Versuch gelingt. Wenn der Oszillator, also die
+                grüne LED, nicht auf die Frequenz der roten einrastet, passt die Beschaltung nicht ganz. Der Bereich vom
+                VCO muss wenigstens grob zum Signal passen. Du kannst dann folgendes tun:
+                <ul>
+                    <li>
+                        Ist die grüne LED zu langsam, dann beschleunige den VCO: setze einen zweiten 10 MOhm Widerstand
+                        parallel zwischen PIN 11 und (-).
+                    </li>
+                    <li>
+                        Ist die grüne LED zu schnell, dann verlangsame den VCO: setze einen zweiten Kondensator parallel
+                        zwischen PIN 6 und PIN 7 ein.
+                    </li>
+                </ul>
+                Diese optionalen Bauteile sind im Bild transparent eingezeichnet.
+            </p>
+        </div>
+    </body>
 
 </html>
