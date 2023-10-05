@@ -39,21 +39,47 @@
             </div>
             </p>
             <p>
+                Verbinde nun die Batterie - und Du kannst richtig sehen, wie der PLL langsam versucht, sich auf die
+                Blink-Frequenz der roten LED einzustellen. Nach so ca 20 s sollte er es geschafft haben: die grüne und
+                rote LED blinken in gleicher Frequenz. Allerdings nicht im Gleichtakt, die grüne LED hängt eine feste
+                Phasen-Differenz hinterher.
+            </p>
+            <p>
                 Vielleicht musst Du wieder ein wenig puzzeln, bis der Versuch gelingt. Wenn der Oszillator, also die
                 grüne LED, nicht auf die Frequenz der roten einrastet, passt die Beschaltung nicht ganz. Der Bereich vom
                 VCO muss wenigstens grob zum Signal passen. Du kannst dann folgendes tun:
-                <ul>
-                    <li>
-                        Ist die grüne LED zu langsam, dann beschleunige den VCO: setze einen zweiten 10 MOhm Widerstand
-                        parallel zwischen PIN 11 und (-).
-                    </li>
-                    <li>
-                        Ist die grüne LED zu schnell, dann verlangsame den VCO: setze einen zweiten Kondensator parallel
-                        zwischen PIN 6 und PIN 7 ein.
-                    </li>
-                </ul>
-                Diese optionalen Bauteile sind im Bild transparent eingezeichnet.
+            <ul>
+                <li>
+                    Ist die grüne LED zu langsam, dann beschleunige den VCO: setze einen zweiten 10 MOhm Widerstand
+                    parallel zwischen PIN 11 und (-).
+                </li>
+                <li>
+                    Ist die grüne LED zu schnell, dann verlangsame den VCO: setze einen zweiten Kondensator parallel
+                    zwischen PIN 6 und PIN 7 ein.
+                </li>
+            </ul>
+            Diese optionalen Bauteile sind im Bild transparent eingezeichnet.
             </p>
+            <details>
+                <summary>Übrigens:</summary>
+                <p>
+                    Diverse Quellen suggerieren, dass der RC-Filter die Frequenz des Oszillators herausfiltern sollte.
+                    Dies ist aber nmM nicht so. Das Datenblatt sagt zur "capture frequency range", dass die
+                    Grenzfrequenz vom Filter im Bereich der Mittenfrequenz des Oszillators sein sollte. Das kannst Du
+                    auch im Bild vom Spannungsverlauf an PIN 9 sehen (Fig 3 im Datasheet). Dort ist ein klares Dreieck
+                    zu sehen, also noch reichlich Oszillator-Frequenz.
+                </p>
+                <p>
+                    Wenn Du wirklich wissen möchtest, wie der Filter zu dimensionieren ist, dann gibt es hierzu das
+                    Datenblatt und Application Notes, z.B. vom Hersteller Texas Instruments. Aber da hast Du dann
+                    wirklich was zu lesen und zu verstehen...
+                <ul>
+                    <li><a href="https://www.ti.com/lit/gpn/CD4046B">Datasheet</a></li>
+                    <li><a href="https://www.ti.com/lit/pdf/scha002">App-Note Rev A</a></li>
+                    <li><a href="https://www.ti.com/lit/pdf/scha003">App-Note Rev B</a></li>
+                </ul>
+                </p>
+            </details>
         </div>
     </body>
 
