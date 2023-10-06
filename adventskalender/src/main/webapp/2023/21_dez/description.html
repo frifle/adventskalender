@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de">
 
-<head>
-	<meta charset="UTF-8">
-	</meta>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	</meta>
-	<title>Elektronik Adventskalender: 50 Hertz Detektor</title>
-	<base href="../../"></base>
-	<link rel="stylesheet" href="css/stylesheet.css">
-	</link>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: 50 Hertz Detektor</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
 
-<body>
-	<header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
-	<div class="content-container active">
-		<h2>21. Dezember: 50 Hz Detektor</h2>
-		<p>
-			@Todo
-		</p>
-		<p>
-
-		</p>
-		<p>
-		<div class="image-container">
-			<img src="./2023/21_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
-		</div>
-		</p>
-	</div>
-</body>
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
+        <div class="content-container active">
+            <h2>21. Dezember: doppelte Frequenz</h2>
+            <p>
+                Eine der wichtigsten Anwendung für PLLs ist die Erzeugung von genauen Frequenzen - und zwar nicht nur
+                als Reproduktion einer Eingangs-Frequenz. Viel interessanter sind Vielfache von genauen Frequenzen. Für
+                den Hausgebrauch basieren die genauesten Oszillatoren auf Schwingquarzen. Die gibt es als Uhrenquarz mit
+                32 kHz bis hin zu ca 30 MHz. Dann ist aber Schluß - nur wie produzieren Computer dann genaue 4,3 GHz?
+            </p>
+            <p>
+                Um einen PLL dazu zu bringen, ein Vielfaches seiner Eingangs-Frequenz zu produzieren, baut man
+                normalerweise in die Verbindung zwischen PIN 3 und PIN 4 einen Frequenzteiler ein.
+                Diese Dinger sind mit normalen Logikbausteinen recht einfach zu bauen. Leider hat der
+                Adventskalender keinen Platz für einen weiteren IC. Ok, der 4046 schafft eh keine GHz, da brauchts
+                dann andere ICs.
+            </p>
+            <p>
+                Als Alternative bietet der 4046 eine besondere Eigenschaft vom PC_1 an: Der Loop kann auch auf
+                Mehrfachen der Eingangsfrequenz einrasten (der PC_2 kann das nicht). Dazu wird der VCO durch den
+                zusätzlichen 1 MOhm Widerstand in einen etwas schnelleren Frequenzbereich geschoben, der zu schnell für
+                die Blinkfrequenz der roten LED ist.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/21_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Falls der Loop nicht einrastet, kannst Du die optionalen Bauelemente vom 19. Dezember probieren. Bei mir
+                rastet er auf der doppelten Frequenz ein, es kann aber auch die drei- oder vierfache werden.
+            </p>
+        </div>
+    </body>
 
 </html>
