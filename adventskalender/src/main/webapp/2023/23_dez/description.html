@@ -1,33 +1,63 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de">
 
-<head>
-	<meta charset="UTF-8">
-	</meta>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	</meta>
-	<title>Elektronik Adventskalender: Fernsteuerung</title>
-	<base href="../../"></base>
-	<link rel="stylesheet" href="css/stylesheet.css">
-	</link>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: Fernsteuerung</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
 
-<body>
-	<header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
-	<div class="content-container active">
-		<h2>23. Dezember: Fernsteuerung</h2>
-		<p>
-			@Todo
-		</p>
-		<p>
-
-		</p>
-		<p>
-		<div class="image-container">
-			<img src="./2023/23_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
-		</div>
-		</p>
-	</div>
-</body>
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
+        <div class="content-container active">
+            <h2>23. Dezember: Fernsteuerung</h2>
+            <p>
+                Achtung, wenn Du Probleme mit flackernden Lichtern hast: Sei heute vorsichtig!
+            </p>
+            <p>
+                Der PLL wandelt eine Frequenz in eine Spannung um, und dies führt zu einer weiteren Anwendung: die
+                Signalübertragung über Frequenzmodulation. Viele Geräte nutzen diese Technik, z.B. IR-Fernbedienungen,
+                Computer-Modems oder das UKW-Radio.
+            </p>
+            <p>
+                Installiere Dir auf einem Smartphone eine Stroboskop-App, mit welcher Du die Taschenlampe vom Handy zum
+                flackern bringen kannst, und zwar bei einstellbarer Frequenz. Ich nutze die App "Stroboskop" von
+                "Zidsoft". Mein Handy ist schon etwas betagt, es schafft eine saubere Blink-Frequenz bis etwa 30 Hz.
+            </p>
+            <p>
+                Auf dem Steckboard baust Du wieder den Lichtempfänger auf, den Du von der Lichtschranke am 17. Dezember
+                kennst. Die gelbe LED ist wieder "verkehrt" eingebaut und dient als Licht-Sensor. Nun aber wird das
+                Ganze mit dem geschlossenen Loop verbunden, der auf die Frequenz des Blinklichts einrasten wird.
+            </p>
+            <p>
+                Der VCO ist gegenüber gestern etwas gebremst. Bei mir blinkt und knattert er nun bis ca 30 Hz. Das
+                Smartphone lege ich auf eine kleine Kiste, so dass es mit der Taschenlampe direkt über der gelben LED
+                liegt und dort hinein leuchtet.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/23_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Mit der Stroboskop-App kannst Du nun die Frequenzen bis ca 30 Hz durchtesten. In einem bestimmten
+                Bereich leuchtet die grüne LED sehr gleichmäßig. In diesem Bereich rastet der PLL ein. Bei mir sind das
+                ca 15 Hz - knapp unter 30 Hz. Bei 15 Hz leuchtet die grüne LED kaum sichtbar, aber gleichmäßig. Und bei
+                25 Hz ist sie deutlich hell. Bei Dir ist der Bereich sicherlich etwas verschoben.
+            </p>
+            <p>
+                Dies ist eine "Fernsteuerung" für die LED: bei der unteren Frequenz vom Einrast-Bereich ist sie fast
+                aus, im oberen Bereich ist sie an. Damit kannst Du Dir ein Kommunikationsprotokoll für digitale Daten
+                überlegen. Niedrige Frequenz ist "0", hohe Frequenz "1" und eine mittlere Frequenz kann als Trennzeichen
+                dienen.
+            </p>
+        </div>
+    </body>
 
 </html>

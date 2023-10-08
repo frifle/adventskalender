@@ -1,41 +1,74 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de">
 
-<head>
-	<meta charset="UTF-8">
-	</meta>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	</meta>
-	<title>Elektronik Adventskalender: 50 Hertz PLL</title>
-	<base href="../../"></base>
-	<link rel="stylesheet" href="css/stylesheet.css">
-	</link>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: 50 Hertz PLL</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
 
-<body>
-	<header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
-	<div class="content-container active">
-		<h2>22. Dezember: 50 Hz PLL</h2>
-		<p>
-			@Todo
-		</p>
-		<p>
-
-		</p>
-		<p>
-		<div class="image-container">
-			<img src="./2023/22_dez/circuit_1.png" aria-label="Bild vom Schaltkreis"></img>
-		</div>
-		</p>
-        <p>
-
-        </p>
-        <p>
-        <div class="image-container">
-            <img src="./2023/22_dez/circuit_2.png" aria-label="Bild vom Schaltkreis"></img>
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
+        <div class="content-container active">
+            <h2>22. Dezember: 50 Hz PLL</h2>
+            <p>
+                In Europa bringen uns die Stromnetze einen Wechselstrom mit einer Frequenz von 50 Hz ins Haus. Diese
+                Netzfrequenz ist in der Nähe von elektrischen Geräten allgegenwärtig. Sie ist zum einen sehr genau, so
+                dass sogar Uhren damit laufen, z.B. im Backofen oder in der Mikrowelle. Zum anderen kann sie beim Aufbau
+                von elektronischen Schaltung mächtig als Störsignal nerven.
+            </p>
+            <p>
+                Die heutige Schaltung ist ein 50 Hz Empfänger. Der Transistor ist als empfindlicher Verstärker
+                geschaltet. Setze einen der langen Schaltdrahtstücke an die Basis vom Transistor, im Bild gelb
+                gezeichnet. Dieser Draht wirkt als Antenne. Wenn Du ihn in die Nähe von einem 50 Hz Sender hältst, wird
+                der Transistor das Signal etwa 500-fach verstärkt über den Elko an das SIGNAL_IN vom Phasencomparator
+                schicken.
+            </p>
+            <p>
+                Der VCO ist so beschaltet, dass er ungefährt zwischen 0 und 100 Hz schwingen kann, also so dass die 50
+                Hz etwa die Mittenfrequenz ist. Dazu musste ich zwei Kondensatoren parallel an PIN 6 und 7 setzen. Du
+                kann hier versuchen, mit den optionalen Bauteilen der letzten Tage zu optimieren. Diese Frequenzen
+                kannst Du austesten, indem Du den PIN 9 mal mit (+) oder mit PIN 13 verbindest. Vielleicht kannst Du
+                dazu die App phyphox nehmen, allerdings funktioniert deren Tongenerator bei den tiefen Frequenzen nicht
+                sehr zuverlässig.
+            </p>
+            <p>
+                Die grüne LED zeigt die Steuerspannung für den VCO an. Normalerweise flackert sie ja ein wenig, dies
+                wird heute durch einen weiteren ELKO herausgefiltert.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/22_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Wenn Du die Antenne nun in die Nähe von einem elektrischen Gerät hälst, hörst Du das typische 50 Hz
+                Brummen. Die grüne LED sollte mit mittlerer Helligkeit ohne groß zu flackern leuchten. Dann ist der PLL
+                auf die 50 Hz eingerastet.
+            </p>
+            <p>
+                Dankbare Geräte bei mir sind übrigens: LED-Glühbirnen oder meine Kaffeemaschine sowie ausgerechnet die
+                Lampe an meinem Labor-Tisch. Die werde ich wohl bei empfindlichen Aufbauten demnächst besser vom
+                Netz trennen.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/22_dez/oszi.png" aria-label="Bild vom Oszilloskop"></img>
+            </div>
+            </p>
+            <p>
+                Am Oszilloskop kann man das Einrasten schön sehen (ich hab ja meine Lampe). Blau ist das 50 Hz
+                "Stör"-Signal, abgegriffen an PIN 13. Und gelb ist der Ausgang vom VCO, also PIN 4. Der PLL macht aus
+                dem etwas schmutzigen Einganssignal ein sauberes digitales. Im Prinzip könnte man dies nun als Basis von
+                z.B. einer Uhr nehmen.
+            </p>
         </div>
-        </p>
-	</div>
-</body>
+    </body>
 
 </html>
