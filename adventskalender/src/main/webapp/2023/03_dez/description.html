@@ -1,103 +1,130 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de">
 
-<head>
-	<meta charset="UTF-8">
-	</meta>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	</meta>
-	<title>Elektronik Adventskalender: der PLL IC 4046</title>
-	<base href="../../">
-	</base>
-	<link rel="stylesheet" href="css/stylesheet.css">
-	</link>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: der PLL IC 4046</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
 
-<body>
-	<header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a></header>
-	<div class="content-container active">
-		<h2>3. Dezember: 4046</h2>
-		<p>
-			Heute setzt Du das zentrale Bauteil in das Steckbrett ein, den IC 4046. Nimm Dir den schwarzen IC mit den 16
-			Anschlussbeinen aus der Stückliste.
-		</p>
-		<p>
-			Der original Adventskalender hatte stets ein Motto, seien es LEDs, Sensoren oder eben ein besonderes IC
-			gewesen. Dieses Jahr geht es um einen phase-locked-loop, kurz PLL. Der IC 4046 ist ein Vertreter dieser
-			Gattung. Ein PLL besteht aus mehreren Baugruppen, die allesamt im 4046 enthalten sind. Du wirst sie Dir in
-			den kommenden Tagen eine nach der anderen ansehen.
-		</p>
-		<p>
-			Zum Einbau legst Du den IC so vor Dir, dass die kleine Einkerbung im schwarzen Gehäuse nach links zeigt
-			und die Beschriftung nicht auf dem Kopf steht. Die Anschlüsse stehen noch etwas zu weit auseinander, so dass
-			der IC nicht genau auf das Steckbrett passt. Bitte biege sie vorsichtig ein wenig nach innen, so dass sie
-			besser passen, und setze den IC zwischen Reihe 7 und 14 ein.
-		</p>
-		<p>
-		<div class="image-container">
-			<img src="./2023/03_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
-		</div>
-		</p>
-		<p>
-			Die Anschlüsse des IC werden von links beginnend gegen den Uhrzeigersinn durchnummeriert. D.h. unten links
-			ist Pin 1. An Pin 8 setzt Du eine Verbindung zur (-)-Schiene, sie ist im Bild mit schwarzem Draht
-			dargestellt. An Pin 16 kommt eine Verbindung zu (+)-Schiene, sie ist im Bild mit rotem Draht
-			gezeichnet. Dies ist die Spannungsversorgung vom IC. Die kurzen Drahtverbindungen werden wie gehabt aus
-			kleinen Stücken Schaltdraht mit abisolierten Enden geschnitten.
-		</p>
-		<p>
-			Schneide Dir vom Schaltdraht zwei lange Stücke von etwa 15 cm ab und entferne auch bei Ihnen an den Enden
-			für ca 5 mm die Isolierung. Die langen Drähte kommen an die Pins 3 und 14 vom IC.
-		</p>
-		<p>
-			Mit Pin 2 wird über den 10 kOhm-Widerstand die grüne LED verbunden. Achte bei der LED bitte wieder darauf,
-			dass der kurze Anschlussdraht in die (-)-Schiene gesetzt wird.
-		</p>
-		<p>
-			Nun kannst Du mit den beiden langen Drähten durchprobieren, sie mit der (+)- oder (-)-Schiene zu verbinden.
-			Wann leuchtet die LED?
-		</p>
-		<table>
-			<thead>
-				<tr>
-					<th>Pin 3</th>
-					<th>Pin 14</th>
-					<th>LED</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>+</td>
-					<td>+</td>
-					<td>aus</td>
-				</tr>
-				<tr>
-					<td>+</td>
-					<td>-</td>
-					<td>an</td>
-				</tr>
-				<tr>
-					<td>-</td>
-					<td>+</td>
-					<td>an</td>
-				</tr>
-				<tr>
-					<td>-</td>
-					<td>-</td>
-					<td>aus</td>
-				</tr>
-			</tbody>
-		</table>
-		<p>
-			Die beiden Pins müssen unterschiedlich angeschlossen sein, damit die LED leuchtet. Sind sie mit der selben
-			Schiene verbunden, ist die LED aus. Dies ist logisch ein "Entweder-Oder", also ein Exklusiv-Oder XOR-Gatter.
-			Die beiden Pins 3 und 14 sind die Eingänge, der Pin 2 mit der LED ist der Ausgang von diesem Gatter.
-		</p>
-		<p>
-			Aber: dies gilt nur, wenn die Drähte wirklich verbunden sind. Wie sieht es aus, wenn sie frei sind? Die
-			beiden Eingänge verhalten sich dann unterschiedlich. Nur wie genau?
-		</p>
-	</div>
-</body>
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a>
+            <!--
+           MIT License
+
+    Copyright (c) 2023 Dr Fritjof Flechsig
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+    -->
+        </header>
+        <div class="content-container active">
+            <h2>3. Dezember: 4046</h2>
+            <p>
+                Heute setzt Du das zentrale Bauteil in das Steckbrett ein, den IC 4046. Nimm Dir den schwarzen IC mit
+                den 16 Anschlussbeinen aus der Stückliste.
+            </p>
+            <p>
+                Der original Adventskalender hatte stets ein Motto, seien es LEDs, Sensoren oder eben ein besonderes IC
+                gewesen. Dieses Jahr geht es um einen phase-locked-loop, kurz PLL. Der IC 4046 ist ein Vertreter dieser
+                Gattung. Ein PLL besteht aus mehreren Baugruppen, die allesamt im 4046 enthalten sind. Du wirst sie Dir
+                in den kommenden Tagen eine nach der anderen ansehen.
+            </p>
+            <p>
+                Zum Einbau legst Du den IC so vor Dich, dass die kleine Einkerbung im schwarzen Gehäuse nach links zeigt
+                und die Beschriftung nicht auf dem Kopf steht. Die Anschlüsse stehen noch etwas zu weit auseinander, so
+                dass der IC nicht genau auf das Steckbrett passt. Bitte biege sie vorsichtig ein wenig nach innen, so
+                dass sie besser passen, und setze den IC zwischen Reihe 7 und 14 ein.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/03_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Die Anschlüsse des IC werden von links beginnend gegen den Uhrzeigersinn durchnummeriert. D.h. unten
+                links ist Pin 1. An Pin 8 setzt Du eine Verbindung zur (-)-Schiene, sie ist im Bild mit schwarzem Draht
+                dargestellt. An Pin 16 kommt eine Verbindung zur (+)-Schiene, sie ist im Bild mit rotem Draht
+                gezeichnet. Dies ist die Spannungsversorgung vom IC. Die kurzen Drahtverbindungen werden wie gehabt aus
+                kleinen Stücken Schaltdraht mit abisolierten Enden geschnitten.
+            </p>
+            <p>
+                Schneide Dir vom Schaltdraht zwei lange Stücke von etwa 15 cm ab und entferne auch bei Ihnen an den
+                Enden
+                für ca 5 mm die Isolierung. Die langen Drähte kommen an die Pins 3 und 14 vom IC.
+            </p>
+            <p>
+                Mit Pin 2 wird über den 10 kOhm-Widerstand die grüne LED verbunden. Achte bei der LED bitte wieder
+                darauf, dass der kurze Anschlussdraht in die (-)-Schiene gesetzt wird.
+            </p>
+            <p>
+                Nun kannst Du mit den beiden langen Drähten durchprobieren, bei welchen Verbindungen mit der (+)- oder
+                (-)-Schiene die LED leuchtet.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pin 3</th>
+                        <th>Pin 14</th>
+                        <th>LED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>+</td>
+                        <td>+</td>
+                        <td>aus</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>-</td>
+                        <td>an</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>+</td>
+                        <td>an</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>aus</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Die beiden Pins müssen unterschiedlich angeschlossen sein, damit die LED leuchtet. Sind sie mit der
+                selben
+                Schiene verbunden, ist die LED aus. Dies ist logisch ein "Entweder-Oder", also ein Exklusiv-Oder
+                XOR-Gatter.
+                Die beiden Pins 3 und 14 sind die Eingänge, der Pin 2 mit der LED ist der Ausgang von diesem Gatter.
+            </p>
+            <p>
+                Aber: dies gilt nur, wenn die Drähte wirklich verbunden sind. Wie sieht es aus, wenn sie frei sind? Die
+                beiden Eingänge verhalten sich dann unterschiedlich. Nur wie genau?
+            </p>
+        </div>
+    </body>
 
 </html>
