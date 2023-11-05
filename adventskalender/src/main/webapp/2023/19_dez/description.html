@@ -15,7 +15,7 @@
 
     <body>
         <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a>
-    <!--
+            <!--
            MIT License
 
     Copyright (c) 2023 Dr Fritjof Flechsig
@@ -38,23 +38,23 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
     -->
-	</header>
+        </header>
         <div class="content-container active">
             <h2>19. Dezember: PLL</h2>
             <p>
-                Heute schliesst sich der Kreis, im wahrsten Sinne des Wortes. Der Ausgang vom VCO ist schon an den
+                Heute schließt sich der Kreis, im wahrsten Sinne des Wortes. Der Ausgang vom VCO ist schon an den
                 Eingang COMPARATOR_IN gelegt - und heute verbindest Du auch noch den Ausgang vom Vergleichs-Gatter mit
                 dem Eingang vom VCO. Das ergibt eine Schleife, also englisch "loop".
             </p>
             <p>
                 Diese Verbindung erfolgt allerdings nicht direkt, sondern über einen Widerstand und einen Kondensator.
-                Diese beiden bilden zusammen einen Filter, der schnelle Frequenzen blockiert und langsame durchläßt,
-                einen low-pass Filter.
+                Diese beiden bilden zusammen einen Filter, der schnelle Frequenzen blockiert und langsame passieren
+                lässt, einen "low-pass" Filter.
             </p>
             <p>
                 Ist dieser Filter geeignet auf die Frequenz des Oszillators abgestimmt, dann pendelt sich der VCO auf
                 diejenige Frequenz ein, die am SIGNAL_IN anliegt. Man sagt, der Oszillator "rastet ein", also englisch
-                "locked". Und zwar nicht nur mit der Frequenz vom Eingangs-Signal, sondern auch mit einer festen
+                "locked". Und zwar nicht auf die Frequenz vom Eingangs-Signal, sondern auch mit einer festen
                 Phasen-Beziehung. Und damit ist der PLL, also der Phase-locked-loop, komplett.
             </p>
             <p>
@@ -64,8 +64,8 @@
             </p>
             <p>
                 Verbinde nun die Batterie - und Du kannst richtig sehen, wie der PLL langsam versucht, sich auf die
-                Blink-Frequenz der roten LED einzustellen. Nach so ca 20 s sollte er es geschafft haben: die grüne und
-                rote LED blinken in gleicher Frequenz. Allerdings nicht im Gleichtakt, die grüne LED hängt eine feste
+                Blink-Frequenz der roten LED einzustellen. Nach etwa 20 s sollte er es geschafft haben: die grüne und
+                rote LED blinken gleich schnell. Allerdings nicht im Gleichtakt, die grüne LED hängt eine feste
                 Phasen-Differenz hinterher.
             </p>
             <p>
