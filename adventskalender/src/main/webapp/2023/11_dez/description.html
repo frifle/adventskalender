@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de">
 
-<head>
-	<meta charset="UTF-8">
-	</meta>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	</meta>
-	<title>Elektronik Adventskalender: Sirene</title>
-	<base href="../../">
-	</base>
-	<link rel="stylesheet" href="css/stylesheet.css">
-	</link>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: Sirene</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
 
-<body>
-	<header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a>
-    <!--
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a>
+            <!--
            MIT License
 
     Copyright (c) 2023 Dr Fritjof Flechsig
@@ -38,42 +38,45 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
     -->
-	</header>
-	<div class="content-container active">
-		<h2>11. Dezember: Sirene</h2>
-		<p>
-			Die Steuerspannung vom VCO kann natürlich auch von anderen Bauteilen erzeugt werden, z.B. von der schon
-			häufig verwendeten Blink-LED. Du siehst und hörst hier die unterschiedlichen Vorwärtsspannungen der beiden LEDs.
-		</p>
-		<p>
-			Die Kopplung von LEDs und PIN 9 erfolgt über einen recht großen Widerstand von 1 MOhm (braun-schwarz-grün).
-			Der Wert des Widerstandes ist in diesem Aufbau egal, genauso funktioniert das 100 kOhm oder 10 MOhm Bauteil.
-			Damit ist es ganz klar: An PIN 9 zählt eine Spannung, ein Strom ist (fast) nicht notwendig.
-		</p>
-		<p>
-		<div class="image-container">
-			<img src="./2023/11_dez/circuit_1.png" aria-label="Bild vom Schaltkreis"></img>
-		</div>
-		</p>
-		<p>
-			Interessant wird der Widerstand im zweiten Aufbau, den es heute ausnahmsweise gibt: Setz einen weiteren
-			Kondensator an den PIN 9. Damit ist hörbar, wie sich der Kondensator über den Widerstand läd oder entläd.
-			Probiere die verschiedenen Werte für den Kopplungs-Widerstand zwischen PIN 9 und den LED durch. Ich finde,
-			der 1 MOhm Widerstand passt am ehesten zu einer Polizeisirene.
-		</p>
-		<p>
-		<div class="image-container">
-			<img src="./2023/11_dez/circuit_2.png" aria-label="Bild vom Schaltkreis"></img>
-		</div>
-		</p>
-		<p>
-			Tausche die grüne LED mit der blauen. Diese hat eine nochmal größere Vorwärtsspannung - und der
-			Tonunterschied wird größer. Die Farben blau und rot passen auch besser zur Polizeisirene.
-		</p>
-		<p>
-			Du kannst die grüne/blaue LED auch ganz ausbauen. Das ergibt auch einen netten Sound.
-		</p>
-	</div>
-</body>
+        </header>
+        <div class="content-container active">
+            <h2>11. Dezember: Sirene</h2>
+            <p>
+                Die Steuerspannung vom VCO kann natürlich auch von anderen Bauteilen erzeugt werden, z.B. von der schon
+                häufig verwendeten Blink-LED. Du siehst und hörst hier die unterschiedlichen Vorwärtsspannungen der
+                beiden LEDs.
+            </p>
+            <p>
+                Die Kopplung von LEDs und PIN 9 erfolgt über einen recht großen Widerstand von 1 MOhm
+                (braun-schwarz-grün). Der Wert des Widerstandes ist in diesem Aufbau egal, genauso funktioniert das 100
+                kOhm oder 10 MOhm Bauteil. Damit ist es ganz klar: An PIN 9 zählt eine Spannung, ein Strom ist (fast)
+                nicht notwendig.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/11_dez/circuit_1.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Interessant wird der Widerstand im zweiten Aufbau, den es heute ausnahmsweise gibt: Setz einen weiteren
+                Kondensator an den PIN 9. Damit ist hörbar, wie sich der Kondensator über den Widerstand läd oder
+                entläd. Probiere die verschiedenen Werte für den Kopplungs-Widerstand zwischen PIN 9 und den LEDs durch.
+                Ich finde, der 1 MOhm Widerstand passt am ehesten zu einer Polizeisirene.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/11_dez/circuit_2.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Tausche die grüne LED mit der blauen. Diese hat eine nochmal größere Vorwärtsspannung - und der
+                Tonunterschied wird größer. Die Farben blau und rot passen auch besser zur Polizeisirene.
+            </p>
+            <p>
+                Du kannst die grüne/blaue LED auch ganz ausbauen. Das ergibt einen weiteren netten Sound. Wenn Du den
+                Kondensator an PIN 9 auch noch wegläßt, hörst Du den kleinen IC in der roten LED arbeiten.
+            </p>
+        </div>
+    </body>
 
 </html>
