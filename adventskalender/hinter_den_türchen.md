@@ -24,5 +24,5 @@ Wenn Du selbst irgendetwas basteln möchtest, hinter dem sich die Bauteile verst
 20. 10 kOhm Widerstand
 21. 10 MOhm Widerstand
 22. drei 100 kOhm Widerstände, ein Elko 10 µF
-23. zwei 1MOhm Widerstände
+23. 1 MOhm Widerstand
 24. Ein Stück Schoki, zur Versöhnung.
