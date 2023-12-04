@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de">
 
-<head>
-	<meta charset="UTF-8">
-	</meta>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	</meta>
-	<title>Elektronik Adventskalender: Eingangs-Signal</title>
-	<base href="../../">
-	</base>
-	<link rel="stylesheet" href="css/stylesheet.css">
-	</link>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: Eingangs-Signal</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
 
-<body>
-	<header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a>
-    <!--
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a>
+            <!--
            MIT License
 
     Copyright (c) 2023 Dr Fritjof Flechsig
@@ -38,50 +38,57 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
     -->
-	</header>
-	<div class="content-container active">
-		<h2>5. Dezember: Eingangs-Signal</h2>
-		<p>
-			Der Eingang an PIN 14 vom IC hat den Namen "SIGNAL IN". Ihn verbindest Du heute mit der roten Blink-LED
-			- natürlich zusammen mit einem Widerstand, damit sie nicht in die ewigen Jagdgründe abraucht. Denk bei der
-			LED wieder an die korrekte Polung. Der kürzere Draht muss in die (-) Schiene hinein. Die beiden blauen
-			Verbindungen werden wie gehabt aus Schaltdraht hergestellt und an beiden Enden für ca 5 mm abisoliert.
-		</p>
-		<p>
-			Wenn die LED aus ist, dann sieht sich SIGNAL_IN über den Widerstand direkt mit (+) verbunden. Ist sie
-			dagegen an, liegt am SIGNAL_IN die Vorwärtsspannung der LED an. Das sind so etwa 1,7 V, was der IC als (-)
-			wertet.
-		</p>
-		<p>
-			Der Eingang an PIN 3 heißt übrigens "COMPARATOR IN". Tatsächlich zeigt die grüne LED einen Vergleich der
-			beiden Signale an. Sind "SIGNAL IN" und "COMPARATOR IN" gleich, ist die LED aus - sind sie
-			unterschiedlich, ist sie an. Da PIN 3 fest mit (-) verbunden ist, siehst Du hier an der grünen LED als
-			Vergleichsergebnis auch das Blinken der roten.
-		</p>
-		<p>
-		<div class="image-container">
-			<img src="./2023/05_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
-		</div>
-		</p>
-		<p>
-			Du kannst die rote LED mal mit ihrem Widerstand zwischen (+) und der Reihe 16 vom Steckbrett tauschen. Also
-			setze die LED "nach oben" und den Widerstand "nach unten". Die grüne LED blinkt dann im Gegentakt zur roten.
-			Das Signal an PIN 14 vom IC hat sich logisch umgedreht, entsprechend fällt der Vergleich ebenfalls umgedreht
-			aus.
-		</p>
-		<details>
-			<summary>Übrigens</summary>
-			<p>
-				Es gibt für die Farbgebung der Drahtverbindungen eine Konvention: Alle Drähte mit direkter Verbindung zu
-				(+) sind rot, die mit direkter Verbindung zu (-) sind schwarz. Die Drähte ohne direkte
-				Verbindung zur Batterie haben eine andere Farbe.
-			</p>
-			<p>
-				Falls Du Schaltdraht mit mehreren Farben hast, machst Du das auch so? Ich persönlich finde die Aufbauten
-				dann sogar hübscher ;-). Und nebenbei verstehe ich die Schaltungen besser.
-			</p>
-		</details>
-	</div>
-</body>
+        </header>
+        <div class="content-container active">
+            <h2>5. Dezember: Eingangs-Signal</h2>
+            <p>
+                Der Eingang an PIN 14 vom IC hat den Namen "SIGNAL IN". Ihn verbindest Du heute mit der roten Blink-LED
+                - natürlich zusammen mit einem Widerstand, damit sie nicht in die ewigen Jagdgründe abraucht. Denk bei
+                der
+                LED wieder an die korrekte Polung. Der kürzere Draht muss in die (-) Schiene hinein. Die beiden blauen
+                Verbindungen werden wie gehabt aus Schaltdraht hergestellt und an beiden Enden für ca 5 mm abisoliert.
+            </p>
+            <p>
+                Wenn die LED aus ist, dann sieht sich SIGNAL_IN über den Widerstand direkt mit (+) verbunden. Ist sie
+                dagegen an, liegt am SIGNAL_IN die Vorwärtsspannung der LED an. Das sind so etwa 1,7 V, was der IC als
+                (-)
+                wertet.
+            </p>
+            <p>
+                Der Eingang an PIN 3 heißt übrigens "COMPARATOR IN". Tatsächlich zeigt die grüne LED einen Vergleich der
+                beiden Signale an. Sind "SIGNAL IN" und "COMPARATOR IN" gleich, ist die LED aus - sind sie
+                unterschiedlich, ist sie an. Da PIN 3 fest mit (-) verbunden ist, siehst Du hier an der grünen LED als
+                Vergleichsergebnis auch das Blinken der roten.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/05_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Du kannst die rote LED mal mit ihrem Widerstand zwischen (+) und der Reihe 16 vom Steckbrett tauschen.
+                Also setze die LED "nach oben" und den Widerstand "nach unten". Die grüne LED blinkt dann im Gegentakt
+                zur roten. Das Signal an PIN 14 vom IC hat sich logisch umgedreht, entsprechend fällt der Vergleich
+                ebenfalls umgedreht aus.
+            </p>
+            <p>
+                Im <a href="https://www.elektronik-labor.de/Notizen/PLL4046.html#t5"
+                    alt="Link zum begleitenden Text im Elektronik-Labor von Burkard Kainka">Elektronik-Labor</a> findest
+                Du noch weitere Hinweise zur Schaltung von heute und morgen.
+            </p>
+            <details>
+                <summary>Übrigens</summary>
+                <p>
+                    Es gibt für die Farbgebung der Drahtverbindungen eine Konvention: Alle Drähte mit direkter
+                    Verbindung zu (+) sind rot, die mit direkter Verbindung zu (-) sind schwarz. Die Drähte ohne direkte
+                    Verbindung zur Batterie haben eine andere Farbe.
+                </p>
+                <p>
+                    Falls Du Schaltdraht mit mehreren Farben hast, machst Du das auch so? Ich persönlich finde die
+                    Aufbauten dann sogar hübscher ;-). Und nebenbei verstehe ich die Schaltungen besser.
+                </p>
+            </details>
+        </div>
+    </body>
 
 </html>
