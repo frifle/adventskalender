@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de">
 
-<head>
-	<meta charset="UTF-8">
-	</meta>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	</meta>
-	<title>Elektronik Adventskalender: Tonanzeiger</title>
-	<base href="../../"></base>
-	<link rel="stylesheet" href="css/stylesheet.css">
-	</link>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        </meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </meta>
+        <title>Elektronik Adventskalender: Tonanzeiger</title>
+        <base href="../../">
+        </base>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        </link>
+    </head>
 
-<body>
-	<header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a>
-    <!--
+    <body>
+        <header class="content-part">Dies ist ein Teil vom <a href="index.html">Elektronik-Adventskalender</a>
+            <!--
            MIT License
 
     Copyright (c) 2023 Dr Fritjof Flechsig
@@ -37,40 +38,40 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
     -->
-	</header>
-	<div class="content-container active">
-		<h2>15. Dezember: Tonanzeiger</h2>
-		<p>
-			Schöne und nicht-so-schöne Töne sollen so langsam mal reichen, es wird ruhiger. Du baust heute einen
-			Licht-Anzeiger. Lass allerdings den Piezo noch mit angeschlossen, damit Du Änderungen nicht nur sehen,
-			sondern auch hören kannst.
-		</p>
-		<p>
-			Verbinde die blaue LED über einen 10 kOhm Widerstand mit PIN 10 des ICs. Dieser PIN ist ein Ausgang des ICs,
-			der den Spannungswert vom Eingang PIN 9 liefert. Hier ist also sichtbar, wie groß die
-			Steuerspannung an PIN 9 aktuell ist.
-		</p>
-		<p>
-			Der PIN 9 steuert den Ton sehr empfindlich, das haben die letzten Tage gut gezeigt. Und zwar so
-			empfindlich, dass sogar ein Messgerät an PIN 9 diese Spannung stören würde. Also gibt es PIN 10, an dem der
-			IC uns freundlicherweise seine Steuerspannung nochmal ausgibt.
-		</p>
-		<p>
-		<div class="image-container">
-			<img src="./2023/15_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
-		</div>
-		</p>
-		<p>
-			Die Steuerspannung ist eine sehr wesentliche Größe, die später echte Information liefern wird. Eine Ausgabe
-			dieser Spannung ist nicht nur freundlich, sondern auch sehr sinnvoll. Besitzt Du ein Multimeter? Dann miss
-			mal die Spannung, während Du die Bleistift-Orgel spielst. Du kannst auch direkt an PIN 9 messen. Hörst Du die
-			Änderung des Tones? Miss an PIN 10, ändert sich der Ton noch?
-		</p>
-		<p>
-			Und wenn kein Multimeter im Haus ist: Schliess mal die blaue LED als "Messgerät" an PIN 9 an. Geht gar
-			nicht, oder?
-		</p>
-	</div>
-</body>
+        </header>
+        <div class="content-container active">
+            <h2>15. Dezember: Tonanzeiger</h2>
+            <p>
+                Schöne und nicht-so-schöne Töne sollen so langsam mal reichen, es wird ruhiger. Du baust heute einen
+                Licht-Anzeiger. Lass allerdings den Piezo noch mit angeschlossen, damit Du Änderungen nicht nur sehen,
+                sondern auch hören kannst.
+            </p>
+            <p>
+                Verbinde die blaue LED über einen 10 kOhm Widerstand mit PIN 10 des ICs. Dieser PIN ist ein Ausgang des
+                ICs, der den Spannungswert vom Eingang PIN 9 liefert. Hier ist also sichtbar, wie groß die
+                Steuerspannung an PIN 9 aktuell ist.
+            </p>
+            <p>
+                Der PIN 9 steuert den Ton sehr empfindlich, das haben die letzten Tage gut gezeigt. Und zwar so
+                empfindlich, dass sogar ein Messgerät an PIN 9 diese Spannung stören würde. Also gibt es PIN 10, an dem
+                der IC uns freundlicherweise seine Steuerspannung nochmal ausgibt.
+            </p>
+            <p>
+            <div class="image-container">
+                <img src="./2023/15_dez/circuit.png" aria-label="Bild vom Schaltkreis"></img>
+            </div>
+            </p>
+            <p>
+                Die Steuerspannung ist eine sehr wesentliche Größe, die später echte Information liefern wird. Eine
+                Ausgabe dieser Spannung ist nicht nur freundlich, sondern auch sehr sinnvoll. Besitzt Du ein Multimeter?
+                Dann miss mal die Spannung, während Du die Bleistift-Orgel spielst. Du kannst auch direkt an PIN 9
+                messen. Hörst Du die Änderung des Tones? Miss an PIN 10, ändert sich der Ton noch?
+            </p>
+            <p>
+                Und wenn kein Multimeter im Haus ist: Schliess mal die blaue LED mit ihrem Widerstand als "Messgerät" an
+                PIN 9 an. Geht gar nicht, oder?
+            </p>
+        </div>
+    </body>
 
 </html>
